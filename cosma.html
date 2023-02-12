@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" cogntent="width=device-width, initial-scale=1.0">
+    <title>online cosmaits</title>
+    <link rel="stylesheet" href="cosma.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+           <li><a href="#images">IMAGES</a></li>
+            <li><a href="#service">SERVICE</a></li>
+            <li><a href="#contect">CONTECT</a></li>
+
+
+        </ul>
+
+    </nav>
+
+    <section id="home">
+        <div class="main">
+            <h1 class="headings">ONLINE COSMATICS</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Libero obcaecati illo accusantium consequatur.<br>
+                 Incidunt aliquid, modi iusto odit inventore<br>
+                 architecto, voluptatum illo, expedita autem reprehenderit <br>
+                 consequatur corrupti maiores earum?</p>
+            <button class="btn">Whatsapp</button>
+        </div>
+
+    </section>
+
+    <section id="about">
+        <h1 class="headings">ABOUT</h1>
+        <div id="pic">
+            <img src="cosma.jpg" alt="">
+            <div class="intro">
+                <h2>RUDA <span>COSMATICS</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                    Ad, necessitatibus impedit? Repudiandae eos reprehenderit <br>
+                    dolore explicabo pariatur ducimus itaque culpa qui obcaecati<br>
+                     blanditiis laudantium voluptatem, praesentium ut in reiciendis<br>
+                      maxime, harum porro quaerat velit deserunt dolores. Quibusdam<br>
+                       totam aut consequatur porro laborum officiis,<br> 
+                    natus quaerat fuga soluta asperiores amet ad!</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="port">
+        <h1 class="headings">IMAGES</h1>
+        <div class="gllary">
+            <div></div>
+            <img src="img1.jpg" alt="">
+            <img src="img2.jpg" alt="">
+            <img src="img3.jpg" alt="">
+            <img src="img4.jpg" alt="">
+            <img src="img5.jpg" alt="">
+            <img src="img6.jpg" alt="">
+            <img src="img7.jpg" alt="">
+            <img src="img8.jpg" alt="">
+            <img src="img9.jpg" alt="">
+
+
+        </div>
+    </section>
+
+    <section id="service">
+        <h1 class="headings">SERVICE</h1>
+        <div class="row">
+            <div class="box">
+                <h1 class="headings">MAKE UP & LEARNING</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> 
+                    Alias a fugit facilis architecto <br>
+                    voluptate optio quibusdam totam. Ab, quidem non.</p>
+            </div>
+            <div class="box">
+                <h1 class="headings">HIRE TREATMENT</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> 
+                    Alias a fugit facilis architecto <br>
+                    voluptate optio quibusdam totam. Ab, quidem non.</p>
+            </div>
+            <div class="box">
+                <h1 class="headings">SHOPPING</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> 
+                    Alias a fugit facilis architecto <br>
+                    voluptate optio quibusdam totam. Ab, quidem non.</p>
+            </div>
+        </div>
+    </section>
+
+    <article>
+        <h1 class="headings">CONTECT</h1>
+    <section class="container">
+        <form onsubmit="SendEmail(); reset(); return false;">
+            <h3>GET IT TOUCH</h3>
+            <input type="text"  id="name" placeholder="your name" required>
+            <input type="email" id="email" placeholder="Email id" required>
+            <input type="text"  id="phone" placeholder="phone number" required>
+            <textarea id="message"  rows="4" placeholder="how can we help you"></textarea>
+            <button type="submit">Send</button>
+
+
+        </form>
+
+    </section>
+</article>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function SendEmail(){
+            Email.send({
+                SecureToken:" 2b3e180c-99b4-48f4-afa6-b5194ca89f6f",
+                To : 'ruda@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "new project",
+                Body : "Name: " + document.getElementById("name").value
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> phone number: " + document.getElementById("phone").value
+                + "<br> message: " + document.getElementById("message").value
+
+            }).then(
+            message => alert("Message sent succesfully")
+            );
+            
+        }
+    </script>
+</body>
+</html>
